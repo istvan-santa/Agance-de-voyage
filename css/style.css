@@ -1,6 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
+
     box-sizing: border-box;
 }
 
@@ -25,9 +24,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    margin-top: 20px;
     background-color: white;
-    margin-bottom: 50px;
 }
 
 header img {
@@ -39,16 +37,20 @@ header img {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 180px;
+    gap: 100px;
 }
 
 nav ul li a {
     color: #333;
     font-weight: 600;
+    padding-top: 10px; 
+    border-top: 2px solid transparent;
 }
+
 
 nav ul li a:hover {
     color: #0065FC;
+    border-top: 2px solid #0065FC; 
 }
 
 /* card fond*/
@@ -59,6 +61,7 @@ nav ul li a:hover {
     padding: 40px 20px;
     max-width: 1440px;
     margin: 0 auto;
+    background-color: var(--main-bg-color);
 }
 
 /* Search */
@@ -168,7 +171,6 @@ nav ul li a:hover {
 }
 
 a {
-    color: inherit;
     text-decoration: none;
 }
 
@@ -205,14 +207,14 @@ a {
 
 .hebergements-and-populaires {
     display: flex;
-    justify-content: space-between;
+    gap: 40px;
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+    background-color: var(--main-bg-color);
 }
 
 /* Hébergements */
@@ -435,10 +437,6 @@ footer {
         justify-content: space-between;
     }
 
-    .populaires-cards a {
-        width: 30%;
-    }
-
     .populaires-cards .card-title {
         font-size: 14px;
     }
@@ -457,7 +455,6 @@ footer {
 
     .activite-cards .card {
         flex: 1 1 24%;
-        max-width: 24%;
     }
 
     .activite-cards .card img {
@@ -469,13 +466,17 @@ footer {
 
 }
 
-/* Small devices (phones, less than 768px) */
+
 @media (max-width: 767px) {
-    /* Centrer le logo et ajuster la taille */
+
     header {
+        /*border-bottom: 2px solid #ccc; /* Couleur grise pour la ligne */
+        /*width: 100%; /* Assure que la ligne prend toute la largeur */
+        /*margin-bottom: 0; /* Supprime le décalage si nécessaire */
         display: flex;
         flex-direction: column;
         align-items: center;
+        border-top: none;
     }
 
     header img {
@@ -486,28 +487,31 @@ footer {
     /* Navigation sous le logo */
     nav ul {
         display: flex;
-        justify-content: center;
-        gap: 20px;
         font-size: 14px;
-        margin-bottom: 20px;
+        padding: 0;
     }
 
-    /* Section de recherche */
-    .search-section {
-        padding: 20px;
+    nav ul li a {
+        color: #333;
+        font-weight: 600;
+        padding-top: 10px; 
+        border-bottom: 2px solid transparent;
+    }
+    
+    nav ul li a:hover {
+    border-top: none;   
+    border-bottom: 2px solid #0065FC; 
     }
 
     .search-input-wrapper {
         display: flex;
         align-items: center;
         width: 100%;
-        padding: 5px 10px;
         border-radius: 30px;
     }
 
     .search-icon {
         background-color: #f0f0f0;
-        padding: 10px;
         border-radius: 30px 0 0 30px;
     }
 
@@ -517,14 +521,13 @@ footer {
         flex: 1;
     }
     .desktop-search-btn {
-        display: none; /* Cacher le bouton texte sur mobile */
+        display: none;
     }
 
     .mobile-search-btn {
-        display: flex; /* Afficher le bouton avec icône */
+        display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 15px;
         border-radius: 0 10px 10px 0;
     }
 
@@ -556,10 +559,10 @@ footer {
         gap: 20px;
         padding: 0 10px;
     }
+
     
     /* "Les plus populaires" en colonne et en premier */
     .populaires {
-        width: 100%;
         padding: 15px 0;
         order: 1;
     }
@@ -575,7 +578,6 @@ footer {
         display: flex;
         align-items: flex-start; /* Change align-items pour aligner le texte en haut */
         flex-direction: row;
-        width: 100%;
         padding: 20px; /* Ajoute plus de padding pour espacer le texte du bord */
         border-radius: 15px;
         background-color: white;
@@ -585,8 +587,6 @@ footer {
     
     /* Image des cartes populaires */
     .populaires-cards img {
-        width: 100px; /* Augmente la largeur de l'image pour un meilleur affichage */
-        height: 100px;
         object-fit: cover;
         border-radius: 10px;
     }
@@ -597,22 +597,22 @@ footer {
         text-align: left;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Centrer verticalement le texte dans le conteneur */
-        gap: 5px; /* Ajoute un espace entre les lignes de texte */
+        justify-content: center; 
+        gap: 5px; 
     }
     
     /* Titre des cartes populaires */
     .populaires-cards .card-title {
         font-size: 16px;
         font-weight: 600;
-        margin: 0; /* Retire la marge pour éviter les décalages */
+        margin: 0; 
     }
     
     /* Sous-titre des cartes populaires */
     .populaires-cards .card-subtitle {
         font-size: 14px;
         color: #555;
-        margin: 0; /* Retire la marge pour éviter les décalages */
+        margin: 0; 
     }
     
 
@@ -653,8 +653,7 @@ footer {
 
     .activites {
         padding: 15px 0;
-        width: 100%; /* Assure que la section prend toute la largeur */
-        margin: 0 auto;
+        width: 100%; 
         background-color: white;
     }
 
@@ -663,7 +662,7 @@ footer {
         flex-direction: column;
         gap: 15px;
         width: 100%;
-        padding: 0 10px; /* Centre la section */
+        padding: 0 10px;
     }
 
     .activite-cards .card {
@@ -693,7 +692,7 @@ footer {
 
     footer {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
     }
     .footer-column {
         width: 100%;
