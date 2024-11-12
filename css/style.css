@@ -44,13 +44,13 @@ nav ul li a {
     color: #333;
     font-weight: 600;
     padding-top: 10px; 
-    border-top: 2px solid transparent;
+    border-top: solid transparent;
 }
 
 
 nav ul li a:hover {
     color: #0065FC;
-    border-top: 2px solid #0065FC; 
+    border-top:  solid #0065FC; 
 }
 
 /* card fond*/
@@ -143,7 +143,6 @@ nav ul li a:hover {
 }
 
 .filter-btn:hover {
-    border-color: #0065FC;
     background-color: #DEEBFF;
 }
 
@@ -192,6 +191,7 @@ a {
 
 .card-title {
     font-size: 16px;
+    color: #333;
 }
 
 .euro {
@@ -470,9 +470,6 @@ footer {
 @media (max-width: 767px) {
 
     header {
-        /*border-bottom: 2px solid #ccc; /* Couleur grise pour la ligne */
-        /*width: 100%; /* Assure que la ligne prend toute la largeur */
-        /*margin-bottom: 0; /* Supprime le décalage si nécessaire */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -485,23 +482,42 @@ footer {
     }
 
     /* Navigation sous le logo */
-    nav ul {
-        display: flex;
-        font-size: 14px;
-        padding: 0;
-    }
 
-    nav ul li a {
-        color: #333;
-        font-weight: 600;
-        padding-top: 10px; 
-        border-bottom: 2px solid transparent;
-    }
-    
-    nav ul li a:hover {
-    border-top: none;   
-    border-bottom: 2px solid #0065FC; 
-    }
+header {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #333;
+    font-weight: 600;
+    padding: 10px 0;
+    display: block;
+    border-bottom: 3px solid lightgray;
+}
+
+nav ul li a:hover {
+    color: #0065FC;
+    border-bottom: 3px solid #0065FC;
+    border-top: none;
+}
 
     .search-input-wrapper {
         display: flex;
