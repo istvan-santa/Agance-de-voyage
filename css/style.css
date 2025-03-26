@@ -51,6 +51,7 @@ nav ul {
     padding-top: 3px;
     border-top: 3px solid white; 
     padding-top: 16px;
+    margin-right: 20px;
 }
 
 
@@ -142,6 +143,7 @@ nav ul {
     padding: 10px 20px;
     font-size: 14px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .filter-btn i {
@@ -386,6 +388,7 @@ a {
     font-size: 16px;
     font-weight: 600;
     color: #333;
+    margin: 10px;
 }
 
 /* Footer Section */
@@ -448,6 +451,13 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .populaires-cards img {
+        width: 33%;
+        height: 136px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
     }
 
     .populaires-cards .card-title {
@@ -538,6 +548,7 @@ nav ul {
     border-bottom: 3px solid ;
     border-color: var(--main-bg-color);
     border-top: none;
+    margin-right: 0px;
     }
 
     
@@ -641,12 +652,6 @@ nav ul {
     }
     
     
-    /* Image des cartes populaires */
-    .populaires-cards img {
-        object-fit: cover;
-        border-radius: 10px;
-    }
-    
     /* Contenu des cartes populaires */
     .populaires-cards .card-content {
         flex: 1;
@@ -742,7 +747,6 @@ nav ul {
         padding: 10px;
         font-weight: 600;
         color: #333;
-        text-align: center;
     }
 
 
@@ -803,6 +807,13 @@ nav ul {
     .populaires {
         max-width: 1440px;
         margin: 0 auto;
-    }    
+    } 
+    
+    .populaires-cards img {
+        width: 33%;
+        height: 136px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
     
 }
