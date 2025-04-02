@@ -45,9 +45,16 @@ nav ul {
     
 }
 
+nav ul li a,
+nav ul li a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+
 .menu  {
     color: #333;
-    font-weight: 600;
+    font-weight: 450;
     padding-top: 3px;
     border-top: 3px solid white; 
     padding-top: 16px;
@@ -155,15 +162,29 @@ nav ul {
     background-color: #DEEBFF;
 }
 
+.info-text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    padding: 20px;
+}
+
 .info-icon {
     font-size: 12px;
-    padding: 6px;
-    border: 1px solid #867a7a;
-    border-radius: 80%;
     color: var(--main-color);
+    border: 1px solid #333;
+    border-radius: 50%;
+    padding: 6px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 8px;
-    margin-bottom: 20px;
 }
+
+
 
 /****** General ***********/
 
@@ -577,6 +598,7 @@ nav ul {
 
     #search-city {
         padding: 13px;
+        padding-right: 0px;
         font-size: 14px;
         flex: 1;
     }
@@ -781,7 +803,7 @@ nav ul {
     
     .search-input-wrapper {
         width: calc(100% - 20px);
-        margin: 20px 10px;
+        margin-left: 5px;
     }
     
     .filter-btn {
